@@ -5,6 +5,33 @@ This repository provides playgrounds to quickly and easily explore [Apache Flink
 The playgrounds are based on [docker-compose](https://docs.docker.com/compose/) environments.
 Each subfolder of this repository contains the docker-compose setup of a playground, except for the `./docker` folder which contains code and configuration to build custom Docker images for the playgrounds.
 
+## Starting the playground
+1. Clone the repository:
+```git
+git clone https://github.com/vishalsingh17/flink-docker-image
+```
+2. Change the directory:
+```
+cd flink-playgrounds/operations-playground
+```
+3. Build the docker-compose:
+```
+docker-compose build
+```
+4. Before starting the playground, create the checkpoint and savepoint directories on the Docker host machine (these volumes are mounted by the jobmanager and taskmanager, as specified in docker-compose.yaml):
+```
+mkdir -p /tmp/flink-checkpoints-directory
+mkdir -p /tmp/flink-savepoints-directory
+```
+5. Start the playground:
+```
+docker-compose up
+```
+6. Enter the playground:
+
+- Go to [Link](http://localhost:8081)
+
+
 ## Available Playgrounds
 
 Currently, the following playgrounds are available:
