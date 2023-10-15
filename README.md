@@ -12,7 +12,7 @@ git clone https://github.com/vishalsingh17/flink-docker-image
 ```
 2. Change the directory:
 ```
-cd flink-playgrounds/operations-playground
+cd flink-docker-image/operations-playground
 ```
 3. Build the docker-compose:
 ```
